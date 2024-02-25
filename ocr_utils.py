@@ -9,7 +9,7 @@ import pre_post_processing as processing
 
 
 # Preprocess for text detection.
-def image_preprocess(input_image):
+def image_preprocess(img):
     """
     Preprocess input image for text detection
 
