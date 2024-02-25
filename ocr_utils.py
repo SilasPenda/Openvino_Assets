@@ -9,7 +9,7 @@ import pre_post_processing as processing
 
 
 # Preprocess for text detection.
-def image_preprocess(img):
+def image_preprocess(input_image, size):
     """
     Preprocess input image for text detection
 
@@ -17,7 +17,7 @@ def image_preprocess(img):
         input_image: input image 
         size: value for the image to be resized for text detection model
     """
-    # img = cv2.resize(input_image, (size, int(size/2)))
+    img = cv2.resize(input_image, (size, int(size/2)))
     img = np.transpose(img, [2, 0, 1]) / 255
     img = np.expand_dims(img, 0)
     # NormalizeImage: {mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225], is_scale: True}
